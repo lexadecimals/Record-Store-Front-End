@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.lexadecimals.losersclubfrontend.model.Album;
 import com.lexadecimals.losersclubfrontend.model.AlbumRepository;
@@ -18,7 +19,7 @@ public class MainActivityViewModel extends AndroidViewModel {
         this.albumRepository = new AlbumRepository(application);
     }
 
-    public LiveData<List<Album>> getAllAlbums() {
+    public MutableLiveData<List<Album>> getAllAlbums() {
           return  albumRepository.getMutableLiveData();
     }
 

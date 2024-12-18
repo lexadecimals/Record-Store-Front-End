@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LosersClubFrontEnd</string>
+    <string name="album_name">Album Name</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="year">Year</string>
+    <string name="add_genre">Genre</string>
+    <string name="add_number_of_items_in_stock">Add number of items in stock</string>
+    <string name="add_price_5_99">Add price: £5.99</string>
+    <string name="submit_album">Submit album</string>
+    <string name="price">add price</string>
+    <string name="stock">add items in stock</string>
+    <string name="submit">Submit</string>
 </resources>
