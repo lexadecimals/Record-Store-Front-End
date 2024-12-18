@@ -19,7 +19,7 @@
             android:padding="12dp"
             >
 
-            <TextView
+            al<TextView
                 android:id="@+id/album_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

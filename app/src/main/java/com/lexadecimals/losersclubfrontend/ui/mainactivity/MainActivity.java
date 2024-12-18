@@ -1,14 +1,11 @@
-package com.lexadecimals.losersclubfrontend;
+package com.lexadecimals.losersclubfrontend.ui.mainactivity;
 
 import android.app.Application;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.lexadecimals.losersclubfrontend.R;
 import com.lexadecimals.losersclubfrontend.model.AlbumRepository;
 
 public class MainActivity extends AppCompatActivity {

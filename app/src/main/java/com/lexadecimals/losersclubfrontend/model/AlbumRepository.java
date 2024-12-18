@@ -2,6 +2,7 @@ package com.lexadecimals.losersclubfrontend.model;
 
 import android.app.Application;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -41,4 +42,25 @@ public class AlbumRepository {
         return mutableLiveData;
     }
 
+    public void addAlbum(Album album) {
+        AlbumApiService albumService = RetrofitInstance.getService();
+        Call<Album> call = albumService.addAlbum(album);
+        call.enqueue(new Callback<Album>() {
+            @Override
+            public void onResponse(Call<Album> call, Response<Album> response) {
+                String text = "Successfully added album!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast.makeText(application.getApplicationContext(), text, duration).show();
+            }
+
+            @Override
+            public void onFailure(Call<Album> call, Throwable t) {
+                String text = "Failed to add album!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast.makeText(application.getApplicationContext(), text, duration).show();
+                Log.e("POST onFailure", t.getMessage());
+            }
+        });
+
+    }
 }
